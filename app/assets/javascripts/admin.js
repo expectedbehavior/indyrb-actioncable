@@ -30,7 +30,8 @@ jQuery(function($) {
       data: [
         { type: "line", name: "event",        showInLegend: true, dataPoints: window.dps.event },
         { type: "line", name: "message sent", showInLegend: true, dataPoints: window.dps.message },
-        { type: "line", name: "login",        showInLegend: true, dataPoints: window.dps.login }
+        { type: "line", name: "login",        showInLegend: true, dataPoints: window.dps.login },
+        { type: "line", name: "bongo",        showInLegend: true, dataPoints: window.dps.bongo }
       ]
     });
 
@@ -43,12 +44,14 @@ jQuery(function($) {
         window.dps.event.push({ x: xVal, y: 0 });
         window.dps.message.push({ x: xVal, y: 0 });
         window.dps.login.push({ x: xVal, y: 0 });
+        window.dps.bongo.push({ x: xVal, y: 0 });
         xVal++;
       };
       if (window.dps.event.length > dataLength) {
         window.dps.event.shift();
         window.dps.message.shift();
         window.dps.login.shift();
+        window.dps.bongo.shift();
       }
       chart.render();
     };

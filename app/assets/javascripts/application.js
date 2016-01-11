@@ -21,4 +21,10 @@ jQuery(function($) {
   $("#messages-form").on("ajax:success", function(e, data, status, xhr) {
     $("#message_body").val(null);
   });
+
+  // play bongos
+  $("#bongo").on("click", function(e) {
+    App.messages.perform("bongo");
+    e.preventDefault();
+  });
 });

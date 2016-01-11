@@ -1,11 +1,20 @@
 Signed in as @<%= cookies.signed[:username] %>. <%= link_to "Logout", logout_sessions_path %>
 <br/><br/>
 
-<%= form_for :message, url: messages_path, remote: true, html: { id: "messages-form" } do |f| %>
-  <%= f.label :body, "Enter a message:"  %><br/>
-  <%= f.text_field :body %><br/>
-  <%= f.submit "Send message" %>
-<% end %>
+<table>
+  <tr>
+    <td>
+      <%= form_for :message, url: messages_path, remote: true, html: { id: "messages-form" } do |f| %>
+        <%= f.label :body, "Enter a message:"  %><br/>
+        <%= f.text_field :body %><br/>
+        <%= f.submit "Send message" %>
+      <% end %>
+    </td>
+    <td>
+      <a id="bongo" href="#" title="play bongo"><img src="<%= asset_path("bongo-drum.png") %>" /></a>
+    </td>
+  </tr>
+</table>
 
 <div id="messages"></div>
 <br/><br/>
