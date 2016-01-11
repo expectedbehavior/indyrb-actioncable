@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   ### Login page is the default
   root "sessions#new"
 
+  namespace :admin do
+    resources :stats, only: [:index]
+  end
+
   # Serve websocket cable requests in-process
   mount ActionCable.server => "/cable"
 end

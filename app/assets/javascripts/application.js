@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require channels
-//= require_tree .
+//= require channels/index
+//= require channels/messages
 
 jQuery(function($) {
   // clear the message box upon send

@@ -10,6 +10,10 @@ class MessagesController < ApplicationController
       username: cookies.signed[:username],
       message: params[:message][:body],
     )
+    ActionCable.server.broadcast(
+      "stats",
+      kind: "message",
+    )
     head :ok
   end
 
