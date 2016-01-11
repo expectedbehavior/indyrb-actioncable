@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require channels
 //= require_tree .
+
+jQuery(function($) {
+  // clear the message box upon send
+  $("#messages-form").on("ajax:success", function(e, data, status, xhr) {
+    $("#message_body").val(null);
+  });
+});
