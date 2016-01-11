@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+== REFERENCES
+
+* https://github.com/rails/rails/tree/master/actioncable
+* https://github.com/rails/actioncable-examples
+* http://nithinbekal.com/posts/rails-action-cable/
+* http://canvasjs.com/editor/?id=http://canvasjs.com/example/gallery/dynamic/realtime_line/
+* http://canvasjs.com/editor/?id=http://canvasjs.com/example/gallery/dynamic/multiseries_line/
