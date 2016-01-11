@@ -37,7 +37,7 @@ jQuery(function($) {
 
     var xVal = 0;
     var updateInterval = 1000; // 1s
-    var dataLength = 500; // number of dataPoints visible at any point
+    var dataLength = 200; // number of dataPoints visible at any point
     var updateChart = function (count) {
       count = count || 1;
       for (var j = 0; j < count; j++) {
