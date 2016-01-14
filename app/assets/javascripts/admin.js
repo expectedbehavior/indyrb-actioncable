@@ -7,6 +7,12 @@
 //= require_self
 
 jQuery(function($) {
+
+  $("#WHATVER").on("click", function(e) {
+    e.preventDefault();
+    App.admin.perform("whatver");
+  });
+
   // setup admin charting
   if ($("#chart-container-js").length > 0) {
     // datapoints, which will be available to any executing javascript on page

@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require channels/index
 //= require channels/messages
+//= require channels/admin
 
 jQuery(function($) {
   // clear the message box upon send
@@ -24,7 +25,7 @@ jQuery(function($) {
 
   // play bongos
   $("#bongo").on("click", function(e) {
-    App.messages.perform("bongo");
     e.preventDefault();
+    App.messages.perform("bongo");
   });
 });
